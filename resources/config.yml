@@ -1,0 +1,59 @@
+---
+# BY FaizDev
+# PowrCore Config V1.0
+# BY FaizDev
+# ----------
+
+# Fly-Config
+  # The below config allows the plugin to reset flight mode when joining the server
+  FlyReset: true
+  # The below config allows you to send a message to the player when they disable fly
+  FlyMessage: "§cFlyMode is off!"
+  # The below config enables multi-world settings (OPTIONS: on and off)
+  Fly: "off"
+  # List all the worlds that fly would work on!
+  worlds:
+  - "world"
+  - "Lobby"
+# EndOfFlyConfig
+
+# LobbyCore-Config
+  #Items 1 | Ender Chest
+  item1-name: "§r§bCosmetics" # Name Items
+  item1-cmd: "settings" # Your Commands
+
+  #Items 2 | Anvil
+  item2-name: "§r§cReport Player" # Name Items
+  item2-cmd: "report" # Your Commands
+
+  #Items 3 | Compass
+  item3-name: "§r§aTeleporter" # Name Items
+  item3-cmd: "games" # Your Commands
+
+  #Items 4 | Popped Chorus Fruit
+  item4-name: "§r§dSocial Menu §7[Use]" # Name Items
+  item4-cmd: "socialmenu" # Your Commands
+
+  #Items 5 | Nether Star
+  item5-name: "§r§5Lobby" # Name Items
+  item5-cmd: "hub" # Your Commands
+# EndOfLobbyCore-Config
+
+# GameUI-Config
+  #GameUI-1
+  GameUi-1: "skywars join"
+  
+  #GameUI-2
+  GameUi-2: "bedwars join"
+  
+  #GameUI-3
+  GameUi-3: "thebridge join"
+
+  #GameUI-4
+  GameUi-4: "fist join"
+
+  #GameUI-5
+  GameUi-5: "ffa join"
+
+# EndOfGameUI-Config
+...

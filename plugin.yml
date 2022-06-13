@@ -1,0 +1,16 @@
+name: PowrCore
+version: 1.0
+main: PowrCore\FaizDev\PowrCore
+authors: ["FaizDev", "ItsToxicGG"]
+api: 4.0.0
+
+permissions:
+  settings.cmd:
+    description: "/settings" 
+    default: op
+  fly.cmd:
+    description: "/fly"
+    default: op   
+  namecolor.cmd:
+    description: "/namecolor"
+    default: op
