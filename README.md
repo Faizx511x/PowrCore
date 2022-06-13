@@ -1,4 +1,5 @@
-
+# PowrCore
+- LobbyCore/System for PocketMine-MP 4
 # Todo & Implemented
 - ✔️ Nick Support
 - ✔️ NameColor Support
