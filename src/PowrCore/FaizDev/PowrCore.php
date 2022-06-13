@@ -22,7 +22,9 @@ use pocketmine\event\entity\EntityDamageByChildEntityEvent;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerJoinEvent;
+use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\player\Player;
+use pocketmine\player\GameMode;
 use pocketmine\event\EventPriority;
 use pocketmine\event\entity\ProjectileHitEvent;
 use pocketmine\entity\projectile\EnderPearl;
@@ -284,6 +286,18 @@ class PowrCore extends PluginBase implements Listener {
 		}
 	}elseif($this->getConfig()->get("Fly") === "off") return true;
 	return true;
+  }
+
+  public function respawn(Player $player){
+    $player->setGamemode(GameMode::ADVENTURE());
+        
+    $this->onJoin($player);
+  }
+
+  public function onHub(Player $player){
+    $player->setGamemode(GameMode::ADVENTURE());
+        
+    $this->onJoin($player);
   }
 
   public function onJoin(PlayerJoinEvent $event) : void{
