@@ -22,7 +22,6 @@ use pocketmine\event\entity\EntityDamageByChildEntityEvent;
 use pocketmine\event\Listener;
 use pocketmine\utils\TextFormat;
 use pocketmine\event\player\PlayerJoinEvent;
-use pocketmine\event\player\PlayerRespawnEvent;
 use pocketmine\player\Player;
 use pocketmine\player\GameMode;
 use pocketmine\event\EventPriority;
@@ -287,11 +286,6 @@ class PowrCore extends PluginBase implements Listener {
 	}elseif($this->getConfig()->get("Fly") === "off") return true;
 	return true;
   }
-  public function respawn(PlayerRespawnEvent $event){
-     $player = $event->getPlayer();
-     $player->setGamemode(GameMode::ADVENTURE());
-     $this->onJoin($player);
-   }
 	
    public function onHub(Player $player){
        if($this->getConfig()->get("Lobby-Worlds") === true){
@@ -330,6 +324,7 @@ class PowrCore extends PluginBase implements Listener {
 		if($this->getConfig()->get("LC-MW") === true){
 		     if(!in_array($player->getWorld()->getDisplayName(), $this->getConfig()->get("LC-Worlds"))){
                          $player = $event->getPlayer();
+			 $player->setGamemode(GameMode::ADVENTURE());
                          $player->getInventory()->clearAll();
                          $player->getArmorInventory()->clearAll();
                          $item1 = ItemFactory::getInstance()->get(130, 0, 1);
