@@ -292,8 +292,8 @@ class PowrCore extends PluginBase implements Listener {
    }
 	
    public function onHub(Player $player){
-       if($this->getConfig()->get("LC-MW") === true){
-           if(!in_array($player->getWorld()->getDisplayName(), $this->getConfig()->get("LC-Worlds"))){
+       if($this->getConfig()->get("Lobby-Worlds") === true){
+           if(!in_array($player->getWorld()->getDisplayName(), $this->getConfig()->get("LobbyWorld"))){
 	                 $player->getInventory()->clearAll();
 			 $player->getArmorInventory()->clearAll();
                          $item1 = ItemFactory::getInstance()->get(130, 0, 1);
