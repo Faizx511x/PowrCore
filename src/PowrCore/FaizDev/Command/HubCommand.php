@@ -15,20 +15,20 @@ use pocketmine\plugin\PluginOwned;
 use PowrCore\FaizDev\PowrCore;
 
 class HubCommand extends Command implements PluginOwned {
+
     private $plugin;
+
     public function __construct(PowrCore $plugin){
         $this->plugin = $plugin; 
+
         parent::__construct("hub", 'Teleport you to the server spawn!', null, ["spawn", "lobby"]);
         $this->setAliases(["spawn", "lobby"]);
     }
-    
+
     public function execute(CommandSender $sender, string $commandLabel, array $args): void {
         if ($sender instanceof Player) {
             $sender->teleport(Server::getInstance()->getWorldManager()->getDefaultWorld()->getSafeSpawn());
-            $sender->getEffects()->clear();
-            $sender->setHealth(20);
-            $sender->getHungerManager()->setFood(20);
-            $this->plugin->onHub($sender);
+            $this->plugin->onhub($sender);
             } else {
                 $sender->sendMessage("Use this command in-game");
             }
@@ -38,3 +38,4 @@ class HubCommand extends Command implements PluginOwned {
         return $this->plugin;
     }
 }
+

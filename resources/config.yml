@@ -37,13 +37,6 @@
   #Items 5 | Nether Star
   item5-name: "§r§5Lobby" # Name Items
   item5-cmd: "hub" # Your Commands
-# Else:
- Lobby-Worlds: true
- 
- LobbyWorld:
- - "world"
- - "lobby"
-
 # EndOfLobbyCore-Config
 
 # GameUI-Config
